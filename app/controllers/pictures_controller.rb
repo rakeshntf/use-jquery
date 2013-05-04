@@ -1,6 +1,9 @@
 class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
+
+  before_filter :authenticate_user!
+  
   def index
     @pictures = Picture.all
 
