@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'mysql2'
+gem 'pg'
 gem 'jquery-rails'
 gem 'nifty-generators'
 gem 'carrierwave'
