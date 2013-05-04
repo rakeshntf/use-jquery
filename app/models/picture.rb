@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
   include Rails.application.routes.url_helpers
-  validates_presence_of :title, :description, :file
+  validates_presence_of  :file
   mount_uploader :file, ImageUploader
   
   #one convenient method to pass jq_upload the necessary information

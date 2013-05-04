@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+   
     <th>File</th>
     <th></th>
     <th></th>
@@ -12,8 +11,8 @@
 
 <% @pictures.each do |picture| %>
   <tr>
-    <td><%= picture.title %></td>
-    <td><%= picture.description %></td>
+    <td><%#= picture.title %></td>
+    <td><%#= picture.description %></td>
     <td><%= image_tag(picture.file_url(:thumb)) if picture.file.present? %></td>
     <td><%= link_to 'Show', picture %></td>
     <td><%#= link_to 'Edit', edit_picture_path(picture) %></td>
