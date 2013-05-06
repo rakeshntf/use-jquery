@@ -1,0 +1,89 @@
+commit 75061b358f291107b971cfd9c46c564d85df33b1
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Mon May 6 15:34:07 2013 +0530
+
+    db/migrate/20130506095616_add_devise_to_users.rb
+
+commit 170266bf2de1e0bf6f750ac467df56399f7b99c7
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Mon May 6 15:33:46 2013 +0530
+
+    delete
+
+commit 788935c49b8412d1ac7bb250e247936fdfbe07fa
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Mon May 6 15:33:11 2013 +0530
+
+    update
+
+commit 5a8f9e7c0fd4ac61b35b45ebdd37e8fe1cdd9cb4
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 20:56:47 2013 +0530
+
+    pg gem
+
+commit 833e8f2f72e63fd899ce937d679b18b9d81b36ac
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 20:52:24 2013 +0530
+
+    ruotes
+
+commit 50b2fe3c4b862c4fd03292f28a0938a041aead72
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 20:27:33 2013 +0530
+
+    add devise gem
+
+commit cfb7715f713ade4677925adebf85f41846003859
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 20:26:44 2013 +0530
+
+    usedevise gem
+
+commit e30597cd24d2dca7fc65143725098a548089caa2
+Author: rakesh <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 18:24:41 2013 +0530
+
+    use mysql2
+
+commit ea80b2e92648324f1d528395fccb07cb942943ea
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 15:07:55 2013 +0530
+
+    Gemfile.lock
+
+commit 310ef5477dbcf89326da2c8d576460cb9add6144
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 15:00:07 2013 +0530
+
+    use pg gem
+
+commit 02b4d717c1672072816eea75424b6ba116f90a10
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 11:22:33 2013 +0530
+
+    remove title and description
+
+commit 20acab033f717ce592359f7d42eb5167cba68f51
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 10:54:26 2013 +0530
+
+     Gemfile.lock
+
+commit 231bb63315f8734c4369a234c7f3763e741cc402
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Sat May 4 10:54:02 2013 +0530
+
+     Gemfile
+
+commit 05ccbab3259c6962a2afaad83c70e98ffad81ba6
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Fri May 3 20:55:24 2013 +0530
+
+    add
+
+commit 612a0dd24dd40b7b52c2157f9e402836bc907ac4
+Author: ntf <ntf@ntf-System-Product-Name.(none)>
+Date:   Fri May 3 20:52:57 2013 +0530
+
+    first commit

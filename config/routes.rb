@@ -1,5 +1,15 @@
 CarrierwaveJqueryFileUpload::Application.routes.draw do
 
+  #devise_for :users
+
+ devise_for :users  do
+  match '/users/sign_out' =>'devise/sessions#destroy'
+end
+
+  
+
+  
+
 
   resources :pictures
   root :to => 'pictures#index'

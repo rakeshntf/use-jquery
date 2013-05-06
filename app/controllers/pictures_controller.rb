@@ -75,6 +75,7 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
+    puts "rakeshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
     @picture = Picture.find(params[:id])
     @picture.destroy
 
