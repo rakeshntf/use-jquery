@@ -1,8 +1,9 @@
 class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
+  load_and_authorize_resource
 
-
+#before_filter :authenticate_user!, :except => [:show, :index]
   
   def index
     @pictures = Picture.all
@@ -17,7 +18,8 @@ class PicturesController < ApplicationController
   # GET /pictures/1.json
   def show
     @picture = Picture.find(params[:id])
-
+    authorize! :read, @picture
+    # @picture is already loaded and authorized
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @picture }
@@ -38,6 +40,8 @@ class PicturesController < ApplicationController
   # GET /pictures/1/edit
   def edit
     @picture = Picture.find(params[:id])
+     authorized! if cannot? :update , @picture
+
   end
 
   # POST /pictures
@@ -75,7 +79,7 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
-    puts "rakeshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+
     @picture = Picture.find(params[:id])
     @picture.destroy
 
@@ -85,3 +89,4 @@ class PicturesController < ApplicationController
     end
   end
 end
+ 

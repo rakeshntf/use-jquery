@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if can? :update, @picture %>
+<%= link_to "Edit", edit_picture_path(@picture)%>
+<% end %>
+
 <p>
   <b>Title:</b>
   <%= @picture.title %>
