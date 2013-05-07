@@ -18,11 +18,11 @@ before_filter :authenticate_user!, :except => [:show, :index]
   # GET /pictures/1.json
   def show
     @picture = Picture.find(params[:id])
-<<<<<<< HEAD
+
     #authorize! :read, @picture
-=======
+
    # authorize! :read, @picture
->>>>>>> cancan
+
     # @picture is already loaded and authorized
     respond_to do |format|
       format.html # show.html.erb

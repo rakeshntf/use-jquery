@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	#has_many :pictures
-<<<<<<< HEAD
-=======
+
+
 	def roles=(roles)
 		self.roles_mask = (roles & ROLES).map {|r| 2**ROLES.index(r)}.inject(0, :+)
 	end
@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
 
 
 
->>>>>>> cancan
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -25,10 +24,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-<<<<<<< HEAD
+
   attr_accessible :email, :password, :password_confirmation, :remember_me
   ROLES = %W[admin moderator author banned]
-=======
+
   attr_accessible :email, :password, :password_confirmation, :remember_me, :roles, :ROLES
->>>>>>> cancan
+
 end
