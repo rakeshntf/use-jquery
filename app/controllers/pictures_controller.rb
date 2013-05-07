@@ -1,7 +1,7 @@
 class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
-  load_and_authorize_resource
+  #load_and_authorize_resource
 
 #before_filter :authenticate_user!, :except => [:show, :index]
   
@@ -18,7 +18,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1.json
   def show
     @picture = Picture.find(params[:id])
-    authorize! :read, @picture
+    #authorize! :read, @picture
     # @picture is already loaded and authorized
     respond_to do |format|
       format.html # show.html.erb
