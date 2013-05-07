@@ -2,7 +2,11 @@ class Picture < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   validates_presence_of  :file
   mount_uploader :file, ImageUploader
+<<<<<<< HEAD
  # belongs_to :user
+=======
+  #belongs_to :user
+>>>>>>> cancan
   #one convenient method to pass jq_upload the necessary information
   def to_jq_upload
   {
