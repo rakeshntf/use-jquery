@@ -1,4 +1,4 @@
-puts "maurya.....rakeshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+
 class Ability
   include CanCan::Ability
 
