@@ -6,7 +6,7 @@ class PicturesController < ApplicationController
 before_filter :authenticate_user!
   
   def index
-    @pictures = Picture.where("user_id = ?", current_user.id)
+    @pictures = Picture.where(:user_id => current_user.id)
  
 
     respond_to do |format|
