@@ -16,4 +16,4 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'meta_request'
-gem "cancan"
+#gem "cancan" , :git =>'git://github.com/ryanb/cancan.git'

@@ -6,6 +6,9 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
   match '/users/sign_out' =>'devise/sessions#destroy'
 end
 
+resources :users do
+  resources :pictures
+end
   
 
   

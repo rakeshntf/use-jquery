@@ -3,10 +3,10 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   #load_and_authorize_resource
 
-before_filter :authenticate_user!, :except => [ :index]
+before_filter :authenticate_user!
   
   def index
-    @pictures = Picture.all
+    @pictures = Picture.where(:user_id=>current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
