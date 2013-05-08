@@ -18,7 +18,7 @@ before_filter :authenticate_user!
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    @picture = get_picture(params[:id])
+    @picture =Picture.find(params[:id])
 
     #authorize! :read, @picture
 
@@ -44,7 +44,7 @@ before_filter :authenticate_user!
 
   # GET /pictures/1/edit
   def edit
-    @picture = get_picture(params[:id])
+    @picture = Picture.find(params[:id])
     # authorized! if cannot? :update , @picture
 
   end
@@ -68,7 +68,7 @@ before_filter :authenticate_user!
   # PUT /pictures/1
   # PUT /pictures/1.json
   def update
-    @picture = get_picture(params[:id])
+    @picture = Picture.find(params[:id])
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
@@ -92,9 +92,5 @@ before_filter :authenticate_user!
       format.html { redirect_to pictures_url }
       format.json { render :json => true }
     end
-  end
-private 
-  def get_picture(id)
-     Picture.find(id)  
   end
  end
