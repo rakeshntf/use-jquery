@@ -87,7 +87,6 @@ GEM
     mini_magick (3.3)
       subexec (~> 0.1.0)
     multi_json (1.0.3)
-    mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.1.4)
@@ -162,7 +161,6 @@ DEPENDENCIES
   jquery-rails
   meta_request
   mini_magick
-  mysql2
   nifty-generators
   pg
   rails (= 3.1.1)
