@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb78f8422859474a6eb8909339ff29b9e440cc07
 class Ability
   include CanCan::Ability
 

@@ -6,7 +6,8 @@ class PicturesController < ApplicationController
 before_filter :authenticate_user!
   
   def index
-    @pictures = Picture.where(:user_id=>current_user.id)
+    @pictures = Picture.where("user_id = ?", current_user.id)
+ 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +18,7 @@ before_filter :authenticate_user!
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    @picture = Picture.find(params[:id])
+    @picture = get_picture(params[:id])
 
     #authorize! :read, @picture
 
@@ -43,7 +44,7 @@ before_filter :authenticate_user!
 
   # GET /pictures/1/edit
   def edit
-    @picture = Picture.find(params[:id])
+    @picture = get_picture(params[:id])
     # authorized! if cannot? :update , @picture
 
   end
@@ -67,7 +68,7 @@ before_filter :authenticate_user!
   # PUT /pictures/1
   # PUT /pictures/1.json
   def update
-    @picture = Picture.find(params[:id])
+    @picture = get_picture(params[:id])
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
@@ -92,5 +93,8 @@ before_filter :authenticate_user!
       format.json { render :json => true }
     end
   end
-end
- 
+private 
+  def get_picture(id)
+     Picture.find(id)  
+  end
+ end
