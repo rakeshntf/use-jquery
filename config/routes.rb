@@ -15,7 +15,7 @@ end
 
 
   resources :pictures
-  root :to => 'pictures#index'
+  root :to => 'pictures#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

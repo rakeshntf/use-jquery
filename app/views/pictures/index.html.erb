@@ -15,8 +15,13 @@
   <tr>
     <td><%#= picture.title %></td>
     <td><%#= picture.description %></td>
-    <td><%= image_tag(picture.file_url(:thumb)) if picture.file.present? %></td>
-    <td><%= link_to 'Show', picture %></td>
+    <%#= link_to image_tag(home.avatar.url(:thumb)),
+ {:controller=>"homes",:action=>"show",:id=>home.id} %> <BR/>
+
+
+
+    <td><%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
+    <td><%#= link_to 'Show', picture %></td>
     <td><%#= link_to 'Edit', edit_picture_path(picture) %></td>
     <td><%= button_to "delete",picture, :method=>:delete, :class=>:destroy %></td>
   </tr>
