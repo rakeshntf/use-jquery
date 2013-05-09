@@ -18,3 +18,4 @@ group :assets do
 end
 gem 'meta_request'
 #gem "cancan" , :git =>'git://github.com/ryanb/cancan.git'
+gem 'rails_admin'
