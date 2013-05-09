@@ -15,6 +15,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass-rails', '~> 2.0.4' 
 end
 gem 'meta_request'
 #gem "cancan" , :git =>'git://github.com/ryanb/cancan.git'
