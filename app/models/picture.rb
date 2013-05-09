@@ -1,8 +1,8 @@
-class Picture < ActiveRecord::Base
+  class Picture < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   validates_presence_of  :file
   mount_uploader :file, ImageUploader
-
+  
  # belongs_to :user
 
   belongs_to :user

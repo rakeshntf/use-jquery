@@ -93,4 +93,11 @@ before_filter :authenticate_user!
       format.json { render :json => true }
     end
   end
+    def download
+     
+     @picture = Picture.find(params[:id])
+     send_file @picture.file.path, :type => 'jpg/jpeg/gif/png', :filename => @picture.file
+    
+    end
  end
+

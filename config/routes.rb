@@ -2,7 +2,13 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  #devise_for :users
+  
+resources :pictures do
+    member do
+      get :download
+    end
+  end    
+  
 
  devise_for :users  do
   match '/users/sign_out' =>'devise/sessions#destroy'
@@ -11,9 +17,7 @@ end
 resources :users do
   resources :pictures
 end
-  
 
-  
 
 
   resources :pictures
