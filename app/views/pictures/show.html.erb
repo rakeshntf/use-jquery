@@ -5,7 +5,9 @@
 <%# end %>
 <p>
   <b>Image</b>
-  <%= @picture.title %>
+  <%= number_to_human_size(@picture.file.size)%>
+ 
+
 </p>
 <p>
   <%= image_tag(@picture.file_url(:medium)) %>

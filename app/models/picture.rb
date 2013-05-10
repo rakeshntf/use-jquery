@@ -4,8 +4,18 @@
   mount_uploader :file, ImageUploader
   
  # belongs_to :user
-
+    
   belongs_to :user
+
+    def sum(*args)
+
+      if block_given?
+        self.to_a.sum(*args) {|*block_args| yield(*block_args)}
+      else
+
+        calculate(:sum, *args)
+      end
+    end
 
   #one convenient method to pass jq_upload the necessary information
   def to_jq_upload
@@ -18,7 +28,7 @@
     "url" => file.url,
     "thumbnail_url" => file.thumb.url,
     "delete_url" => picture_path(:id => id),
-    "delete_type" => "DELETE" 
+    "delete_type" => "DELETE"   
    }
   end
 end

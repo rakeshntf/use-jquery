@@ -24,7 +24,7 @@
             // By default, files added to the widget are uploaded as soon
             // as the user clicks on the start buttons. To enable automatic
             // uploads, set the following option to true:
-            autoUpload: false,
+            autoUpload: true,
             // The following option limits the number of files that are
             // allowed to be uploaded using this widget:
             maxNumberOfFiles: undefined,
@@ -331,7 +331,7 @@
             if (file.size >= 1000000) {
                 return (file.size / 1000000).toFixed(2) + ' MB';
             }
-            return (file.size / 1000).toFixed(2) + ' KB';
+            return (file.size/1024 )+ ' KB';
         },
 
         _hasError: function (file) {
