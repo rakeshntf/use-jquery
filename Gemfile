@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 
 
-gem 'mysql2'
+gem 'pg'
 gem 'jquery-rails', '1.0.16'
 gem 'nifty-generators', '0.4.6'
 gem 'carrierwave', '0.5.7'
