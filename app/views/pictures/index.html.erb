@@ -5,7 +5,6 @@
     <td>File</td>
     <% @pictures.each do |picture| %>
     <tr> 
-        <td><%= picture.file.size %>KB</td>
        
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
@@ -16,6 +15,13 @@
   </tr>
 <% end %>
 </table>
+        <% @pictures.each do |z|%>
+           <th><% a = z.file.size %></th>
+           <%= a = a + 1 rescue a = z.file.size %>
+            
+              
+           <% end %>
+
 <br />
 <%= link_to 'New Picture', new_picture_path %>
 
