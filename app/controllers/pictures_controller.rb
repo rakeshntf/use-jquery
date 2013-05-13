@@ -6,6 +6,7 @@ class PicturesController < ApplicationController
 before_filter :authenticate_user!
   
   def index
+   
     @pictures = Picture.where(:user_id => current_user.id)
  
 
@@ -34,6 +35,7 @@ before_filter :authenticate_user!
   # GET /pictures/new
   # GET /pictures/new.json
   def new
+   
     @picture = Picture.new
 
     respond_to do |format|

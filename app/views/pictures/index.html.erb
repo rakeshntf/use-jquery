@@ -4,8 +4,9 @@
  
     <td>File</td>
     <% @pictures.each do |picture| %>
-    <tr>   
-    <td><%#= picture.description %></td>
+    <tr> 
+        <td><%= picture.file.size %>KB</td>
+       
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
     <td><%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
@@ -17,3 +18,4 @@
 </table>
 <br />
 <%= link_to 'New Picture', new_picture_path %>
+
