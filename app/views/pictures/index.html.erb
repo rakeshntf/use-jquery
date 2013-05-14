@@ -1,9 +1,13 @@
 <h1> Pictures</h1>
 <h3> Click on picture to more details </h3>
- <h3> You have used <%= picture(@pictures)/104857%>MB </h3>
+<%#= render 'information' %>
+
+ <% p=picture(@pictures)/104857%> 
+  <h3> You have left   <%=g=5000-p%>MB</h3>
 <table>
-    <td>File</td>
+    <td>Images</td>
     <% @pictures.each do |picture| %>
+    
     <tr>   
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
