@@ -25,13 +25,23 @@
           <button type="submit" class="start">Start upload</button>
           <button type="reset" class="cancel">Cancel upload</button>
           <button type="button" class="delete">Delete files</button>
+
       </div>
-  <% end %>
+
+  
   <div class="fileupload-content">
-      <table class="files"></table>
+      <table class="files"></table> 
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <br/>
+         <%= f.label :description %>
+        <%= f.text_field :description %>
       <div class="fileupload-progressbar"></div>
   </div>
-</div>
 
+</div>
+<% end %>
 <%= render :partial => "template-upload" %>
 <%= render :partial => "template-download" %>

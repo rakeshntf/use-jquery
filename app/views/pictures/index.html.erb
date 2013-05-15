@@ -5,10 +5,21 @@
  <% p=picture(@pictures)/104857%> 
   <h3> You have left   <%=g=5000-p%>MB</h3>
 <table>
-    <td>Images</td>
-    <% @pictures.each do |picture| %>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>File</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
     
-    <tr>   
+    <% @pictures.each do |picture| %>
+    <tr>
+    <td><%= picture.title %></td>
+    <td><%= picture.description %></td>
+    
+     
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
     <td><%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
