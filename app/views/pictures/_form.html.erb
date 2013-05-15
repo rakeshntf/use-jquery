@@ -13,7 +13,6 @@
       <div class="field">
         <%#= f.label :description %>
         <%#= f.text_field :description %>
-        
       <%= f.hidden_field :user_id, :value => current_user.id %>
       </div>
       <br />
@@ -25,23 +24,26 @@
           <button type="submit" class="start">Start upload</button>
           <button type="reset" class="cancel">Cancel upload</button>
           <button type="button" class="delete">Delete files</button>
-
-      </div>
-
-  
+      </div> 
   <div class="fileupload-content">
-      <table class="files"></table> 
-      <div class="field">
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-      </div>
+      <table class="files"></table>
+       
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
       <br/>
-         <%= f.label :description %>
-        <%= f.text_field :description %>
+        <div class="field">
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </div>
+                  
       <div class="fileupload-progressbar"></div>
   </div>
 
 </div>
 <% end %>
+
 <%= render :partial => "template-upload" %>
 <%= render :partial => "template-download" %>
+

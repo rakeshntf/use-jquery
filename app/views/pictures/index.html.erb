@@ -2,8 +2,8 @@
 <h3> Click on picture to more details </h3>
 <%#= render 'information' %>
 
- <% p=picture(@pictures)/104857%> 
-  <h3> You have left   <%=g=5000-p%>MB</h3>
+ <% picture(@pictures)/100000%> 
+     <%#=g=5000-p%>
 <table>
     <tr>
         <th>Title</th>
@@ -16,21 +16,17 @@
     
     <% @pictures.each do |picture| %>
     <tr>
-    <td><%= picture.title %></td>
+     <td><%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
+     <td><%= picture.title %></td>
     <td><%= picture.description %></td>
-    
-     
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
-    <td><%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
     <td><%#= link_to 'Show', picture %></td>
     <td><%#= link_to 'Edit', edit_picture_path(picture) %></td>
     <td><%#= button_to "delete",picture, :method=>:delete, :class=>:destroy %></td>
   </tr>
 <% end %>
 </table>
-       
-   
 <br />
 <%= link_to 'New Picture', new_picture_path %>
 
