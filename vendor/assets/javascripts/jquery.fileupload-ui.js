@@ -178,8 +178,13 @@
             },
             // Callback for uploads start, equivalent to the global ajaxStart event:
             start: function () {
+                alert('rakesh')
+
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
+                     $(".fieldforhide").hide();
+
+
             },
             // Callback for uploads stop, equivalent to the global ajaxStop event:
             stop: function () {

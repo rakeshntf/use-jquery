@@ -3,8 +3,8 @@
 	<h3> Use Drag to store the Images </h3>
 	<%#`=@pictures.inspect%>
 	<div style="float:right; display:block; width:40%; height:auto;">
-	<%#= current_user.email%>
-	  You have used <%= ($a/100000)%>MB 
+	<b><%= current_user.email%> ||
+	  You have used <%=($a/100000)%>MB</b> 
 	</div>
 	<%#= destroy_picture_path(1)%>
 	<%= render 'form' %>

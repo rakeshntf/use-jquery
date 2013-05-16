@@ -1,5 +1,11 @@
 $(function () {
 
+                 $(".ui-button-text").click(function() {
+
+         alert('hii');
+       });
+
+
     $('.fileupload-content').append('<div id="loading"></div>');
 
     var inputs = $('#new_picture :input[type=text]');
@@ -74,5 +80,11 @@ $(function () {
       //$('.progress-bar').find('div').css('width',  progress + '%').find('span').html(progress + '%');
       console.info(progress);
     });
+
+      $("#start").click(function() {
+
+         alert('hii');
+       });
+
 
 });

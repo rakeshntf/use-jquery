@@ -22,3 +22,7 @@ gem 'meta_request', '0.2.4'
 gem 'rails_admin', '0.0.1'
 #gem 'ruby-debug'
 gem 'debugger', group: [:development, :test]
+
+group :production do
+ gem 'mysql2'
+	end

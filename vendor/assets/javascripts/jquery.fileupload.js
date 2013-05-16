@@ -15,6 +15,10 @@
 (function ($) {
     'use strict';
 
+    $("#start").click(function() {
+alert("Handler for .click() called.");
+});
+
     // The fileupload widget listens for change events on file input fields
     // defined via fileInput setting and drop events of the given dropZone.
     // In addition to the default jQuery Widget methods, the fileupload widget

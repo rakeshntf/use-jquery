@@ -1,6 +1,9 @@
 (function ($) {
     'use strict';
 
+
+
+
   $.widget('blueimpUIX.fileupload', $.blueimpUI.fileupload, {
 
       options: {
@@ -89,7 +92,7 @@
                       '<td class="error" colspan="2"></td>'
                   :
                       '<td class="progress"><div></div></td>' +
-                      '<td class="start"><button>Start</button></td>'
+                      '<td class="start"><button id="startid">Start</button></td>'
                   ) + 
                   '<td class="cancel"><button>Cancel</button></td>' +
                   '</tr>');
@@ -104,6 +107,9 @@
               rows = rows.add(row);
           });
           return rows;
+
+
+
       }
 
   });
