@@ -178,7 +178,7 @@
             },
             // Callback for uploads start, equivalent to the global ajaxStart event:
             start: function () {
-                alert('rakesh')
+                alert('Title and Description can not be blank')
 
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
