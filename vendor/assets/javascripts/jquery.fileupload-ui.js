@@ -60,6 +60,7 @@
             // widget (via file input selection, drag & drop or add API call).
             // See the basic file upload widget for more information:
             add: function (e, data) {
+               
                 var that = $(this).data('fileupload');
                 that._adjustMaxNumberOfFiles(-data.files.length);
                 data.isAdjusted = true;
@@ -73,6 +74,7 @@
                         data.isValidated) {
                     data.jqXHR = data.submit();
                 }
+                 $(".fieldforhide").show();
             },
             // Callback for the start of each file upload request:
             send: function (e, data) {

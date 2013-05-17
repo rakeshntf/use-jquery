@@ -17,6 +17,7 @@
 
 
 
+<%#=link_to "Log in with Facebook", omniauth_authorize_path(:user, :facebook), :class => "popup", :"data-width" => 600, :"data-height" => 400%>
 
 <% if user_signed_in? %>
     Signed in as <%= current_user.email %>. Not you?

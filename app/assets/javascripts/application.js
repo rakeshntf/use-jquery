@@ -14,3 +14,12 @@
 //= require pictures/customupload
 //= require pictures/form
 //= require_tree .
+
+
+
+
+
+$("a.popup").click(function(e) {
+  popupCenter($(this).attr("href"), $(this).attr("data-width"), $(this).attr("data-height"), "authPopup");
+  e.stopPropagation(); return false;
+});
