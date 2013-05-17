@@ -9,7 +9,7 @@
         <%#= f.label :title %>
         <%#= f.text_field :title %>
       </div>
-      <br />
+      <br/>
       <div class="field">
         <%#= f.label :description %>
         <%#= f.text_field :description %>
@@ -28,14 +28,7 @@
   <div class="fileupload-content">
       <table class="files"></table>
        
-        <div class="fieldforhide">
-          <%= f.label :title %>
-          <%= f.text_field :title %></br>
-
-          <%= f.label :description %>
-          <%= f.text_field :description %>
-
-        </div>
+        <%=render 'information'%>
                   
       <div class="fileupload-progressbar"></div>
   </div>

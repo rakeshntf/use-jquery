@@ -1,19 +1,16 @@
+	<div style="float:right; display:block; width:20%; height:auto;">
+		<div class ="sidebar">
+			<b><%= current_user.email%> ||
+				<%=current_user.user_address%>,
 		
-	<h1>New pictures</h1>
+	 	 You have left <%p=($a/100000)%>MB</b> 
+	 	 <%=(5000-p)%>
+	 	</div>
+	</div>
+	<h2>New pictures</h2>
 	<h3> Use Drag to store the Images </h3>
 	<%#`=@pictures.inspect%>
-	<div style="float:right; display:block; width:50%; height:auto;">
-		<div class= "class">
-		<%=current_user.user_address%>
-		 </div>
-		 
-	<b><%= current_user.email%> ||
-
-	  You have left <%p=($a/100000)%>MB</b> 
-	  <%=(5000-p)%>
-
 	
-	</div>
 	<%#= destroy_picture_path(1)%>
 	<%= render 'form' %>
-	<%= link_to 'Back', pictures_path %>
+	<%= link_to ' Home', pictures_path %>

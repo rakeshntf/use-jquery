@@ -11,7 +11,10 @@
 
 /*jslint nomen: true, unparam: true, regexp: true */
 /*global window, document, URL, webkitURL, FileReader, jQuery */
+jQuery(window).load(function() {
 
+$(".fieldforhide").hide();
+});
 (function ($) {
     'use strict';
     
@@ -60,6 +63,7 @@
             // widget (via file input selection, drag & drop or add API call).
             // See the basic file upload widget for more information:
             add: function (e, data) {
+              
                
                 var that = $(this).data('fileupload');
                 that._adjustMaxNumberOfFiles(-data.files.length);
@@ -78,6 +82,7 @@
             },
             // Callback for the start of each file upload request:
             send: function (e, data) {
+              
                 if (!data.isValidated) {
                     var that = $(this).data('fileupload');
                     if (!data.isAdjusted) {
@@ -100,6 +105,7 @@
             },
             // Callback for successful uploads:
             done: function (e, data) {
+              
                 var that = $(this).data('fileupload');
                 if (data.context) {
                     data.context.each(function (index) {
@@ -127,9 +133,11 @@
                             $(this).show();
                         });
                 }
+
             },
             // Callback for failed (abort or error) uploads:
             fail: function (e, data) {
+               
                 var that = $(this).data('fileupload');
                 that._adjustMaxNumberOfFiles(data.files.length);
                 if (data.context) {
@@ -329,10 +337,11 @@
         },
 
         _formatFileSize: function (file) {
+
             if (typeof file.size !== 'number') {
                 return '';
         }
-             return (file.size/104857).toFixed(2)+ ' MB';
+             return (file.size/1048576).toFixed(2)+ ' MB';
         },
 
         _hasError: function (file) {

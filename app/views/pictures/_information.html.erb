@@ -1,5 +1,10 @@
-<h3> This  information is for Only User</h3>
+ <%= form_for @picture, :html => { :multipart => true } do |f| %>
+<div class="fieldforhide">
+          <%= f.label :title %>
+          <%= f.text_field :title %></br>
 
- <%= $a/10000%>
- <%#=5000-r %>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
 
+        </div>
+        <%end%>
