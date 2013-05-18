@@ -1,24 +1,16 @@
 <h1> Pictures</h1>
 <h3> Click on picture to more details </h3>
+<h3> Images</h3>
+<h3><%=picture(@pictures)%></h3>
 <%#= render 'information' %>
-
- <% picture(@pictures)/100000%> 
      <%#=g=5000-p%>
 <table>
     <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>File</th>
-        <th></th>
-        <th></th>
-        <th></th>
     </tr>
-    
     <% @pictures.each do |picture| %>
     <tr>
-     <td>
+        <%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %>
 
-        <%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %></td>
      <td><%#= picture.title %></td>
     <td><%#= picture.description %></td>
     <%#= link_to image_tag(home.avatar.url(:thumb)),
@@ -33,3 +25,6 @@
 <%= link_to 'New Picture', new_picture_path %>
 
 <%#=link_to "Log",new_picture_path, :class => "popup", :"data-width" => 600, :"data-height" => 400%>
+
+
+   

@@ -1,23 +1,14 @@
 <p id="notice"><%= notice %></p>
-<%#if can? :update, @picture %>
-<%#= link_to "Edit", edit_picture_path(@picture)%>
-<%#=# link_to "Edit", edit_picture_path(@picture)%>
-<%# end %>
 <p>
 	<b>Title:</b>
 	<%=@picture.title%>
 </p>
-
 <p>
   <b>Image</b>
-  <%#=@picture.file.size%>
+  <%=(@picture.file.size)%> Bit
 </p>
-
  <p>
   <%= image_tag(@picture.file_url(:medium)) %>
 </p>
-<%#= link_to 'Edit', edit_picture_path(@picture) %> 
 <%= link_to 'Back', pictures_path %><br/>
-<%#= link_to "Raw blast output", "/data/02_blastout/#{@bl_file}" %>
-<td><%#= link_to 'Download', download_picture_path(@picture) %></td>
 <%= link_to 'Download', :action => :download, :id => @picture.id %>

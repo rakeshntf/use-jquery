@@ -4,13 +4,8 @@
 
   validates_presence_of  :file
   mount_uploader :file, ImageUploader
-  
  # belongs_to :user
-    
   belongs_to :user
-
-
-
   #one convenient method to pass jq_upload the necessary information
   def to_jq_upload
   {

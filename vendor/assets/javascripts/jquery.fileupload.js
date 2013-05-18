@@ -170,6 +170,7 @@ alert("Handler for .click() called.");
         },
 
         _getTotal: function (files) {
+    
             var total = 0;
             $.each(files, function (index, file) {
                 total += file.size || 1;
@@ -178,6 +179,7 @@ alert("Handler for .click() called.");
         },
 
         _onProgress: function (e, data) {
+            
             if (e.lengthComputable) {
                 var total = data.total || this._getTotal(data.files),
                     loaded = parseInt(

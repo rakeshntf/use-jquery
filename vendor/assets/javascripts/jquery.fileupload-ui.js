@@ -63,8 +63,7 @@ $(".fieldforhide").hide();
             // widget (via file input selection, drag & drop or add API call).
             // See the basic file upload widget for more information:
             add: function (e, data) {
-              
-               
+                 $(".fieldforhide").show();
                 var that = $(this).data('fileupload');
                 that._adjustMaxNumberOfFiles(-data.files.length);
                 data.isAdjusted = true;
@@ -78,7 +77,7 @@ $(".fieldforhide").hide();
                         data.isValidated) {
                     data.jqXHR = data.submit();
                 }
-                 $(".fieldforhide").show();
+                
             },
             // Callback for the start of each file upload request:
             send: function (e, data) {
@@ -337,11 +336,16 @@ $(".fieldforhide").hide();
         },
 
         _formatFileSize: function (file) {
-
-            if (typeof file.size !== 'number') {
+        if (typeof file.size !== 'number') {
                 return '';
-        }
-             return (file.size/1048576).toFixed(2)+ ' MB';
+            }
+            if (file.size >= 1000000000) {
+                return (file.size / 1000000000).toFixed(2) + ' GB';
+            }
+            if (file.size >= 1000000) {
+                return (file.size / 1000000).toFixed(2) + ' MB';
+            }
+            return (file.size / 1000).toFixed(2) + ' KiloBit';
         },
 
         _hasError: function (file) {
