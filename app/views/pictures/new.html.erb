@@ -2,15 +2,13 @@
 		<div class ="sidebar">
 			<b><%= current_user.email%> ||
 				<%=current_user.user_address%>,
-		
 	 	 You have left <%#p=($a/100000)%>MB</b> 
 	 	 <%#=(5000-p)%>
+	 	<%=@totalsize%>rk
+	 	
 	 	</div>
 	</div>
 	<h2>New pictures</h2>
 	<h3> Use Drag to store the Images </h3>
-	<%#`=@pictures.inspect%>
-	
-	<%#= destroy_picture_path(1)%>
 	<%= render 'form' %>
 	<%= link_to ' Home', pictures_path %>

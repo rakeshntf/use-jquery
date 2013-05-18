@@ -1,7 +1,7 @@
 <h1> Pictures</h1>
 <h3> Click on picture to more details </h3>
 <h3> Images</h3>
-<h3><%=picture(@pictures)%></h3>
+ <%= render "size"%>
 <%#= render 'information' %>
      <%#=g=5000-p%>
 <table>
@@ -11,7 +11,7 @@
     <tr>
         <%=link_to image_tag(picture.file_url(:thumb)),{:controller =>"pictures",:action =>"show", :id=>picture.id} %>
 
-     <td><%#= picture.title %></td>
+
     <td><%#= picture.description %></td>
     <%#= link_to image_tag(home.avatar.url(:thumb)),
     {:controller=>"homes",:action=>"show",:id=>home.id} %> 
