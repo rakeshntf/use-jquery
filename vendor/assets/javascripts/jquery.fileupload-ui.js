@@ -338,15 +338,15 @@ $(".fieldforhide").hide();
         _formatFileSize: function (file) {
         if (typeof file.size !== 'number') {
                 return '';
+            
+           
             }
-            if (file.size >= 1000000000) {
-                return (file.size / 1000000000).toFixed(2) + ' GB';
-            }
-            if (file.size >= 1000000) {
-                return (file.size / 1000000).toFixed(2) + ' MB';
-            }
-            return (file.size / 1000).toFixed(2) + ' KiloBit';
+            if (file.size >= 1000) {
+              
+            return (file.size / 100000).toFixed(2) + ' MB';
+        }
         },
+
 
         _hasError: function (file) {
             if (file.error) {
