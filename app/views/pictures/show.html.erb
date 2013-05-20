@@ -4,8 +4,9 @@
 	<%=@picture.title%>
 </p>
 <p>
-  <b>Image</b>
-  <%=(@picture.file.size)%> Bit
+  <b></b>
+  <b> Image size</b>
+  <%=(@picture.file.size)/100000.0%> MB
 </p>
  <p>
   <%= image_tag(@picture.file_url(:medium)) %>

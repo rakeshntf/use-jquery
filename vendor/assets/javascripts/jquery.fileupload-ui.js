@@ -337,13 +337,14 @@ $(".fieldforhide").hide();
 
         _formatFileSize: function (file) {
         if (typeof file.size !== 'number') {
-                return '';
+               
             
            
-            }
-            if (file.size >= 1000) {
+           
+           (file.size >= 1000) 
               
             return (file.size / 100000).toFixed(2) + ' MB';
+
         }
         },
 
