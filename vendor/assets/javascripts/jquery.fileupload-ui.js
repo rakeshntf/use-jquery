@@ -345,7 +345,7 @@ $(".fieldforhide").hide();
             if (file.size >= 1000000) {
                 return (file.size / 1000000).toFixed(2) + ' MB';
             }
-            return (file.size ).toFixed(2) + ' KiloBit';
+            return (file.size / 1000).toFixed(2) + ' KiloBit';
         },
 
         _hasError: function (file) {
