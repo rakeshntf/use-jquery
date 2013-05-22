@@ -16,10 +16,12 @@
 //= require_tree .
 
 
+$(function() {
+  window.auto_click_tick = function() {
+    $(".auto_click").click();
+  }
+  window.auto_click_tick();
+};
 
 
 
-$("a.popup").click(function(e) {
-  popupCenter($(this).attr("href"), $(this).attr("data-width"), $(this).attr("data-height"), "authPopup");
-  e.stopPropagation(); return false;
-});

@@ -11,10 +11,11 @@
 
 /*jslint nomen: true, unparam: true, regexp: true */
 /*global window, document, URL, webkitURL, FileReader, jQuery */
-jQuery(window).load(function() {
+    jQuery(window).load(function() {
+    $(".fieldforhide").hide();
+    });
 
-$(".fieldforhide").hide();
-});
+ 
 (function ($) {
     'use strict';
     
@@ -62,6 +63,10 @@ $(".fieldforhide").hide();
             // The add callback is invoked as soon as files are added to the fileupload
             // widget (via file input selection, drag & drop or add API call).
             // See the basic file upload widget for more information:
+
+
+
+
             add: function (e, data) {
                  $(".fieldforhide").show();
                 var that = $(this).data('fileupload');
@@ -104,7 +109,7 @@ $(".fieldforhide").hide();
             },
             // Callback for successful uploads:
             done: function (e, data) {
-              
+             
                 var that = $(this).data('fileupload');
                 if (data.context) {
                     data.context.each(function (index) {
@@ -122,6 +127,8 @@ $(".fieldforhide").hide();
                                     $(this).show();
                                 });
                         });
+
+
                     });
                 } else {
                     that._renderDownload(data.result)
@@ -132,8 +139,8 @@ $(".fieldforhide").hide();
                             $(this).show();
                         });
                 }
-
-            },
+               
+                },
             // Callback for failed (abort or error) uploads:
             fail: function (e, data) {
                
@@ -171,6 +178,7 @@ $(".fieldforhide").hide();
             },
             // Callback for upload progress events:
             progress: function (e, data) {
+
                 if (data.context) {
                     data.context.find('.ui-progressbar').progressbar(
                         'value',
@@ -180,6 +188,7 @@ $(".fieldforhide").hide();
             },
             // Callback for global upload progress events:
             progressall: function (e, data) {
+
                 $(this).find('.fileupload-progressbar').progressbar(
                     'value',
                     parseInt(data.loaded / data.total * 100, 10)
@@ -187,11 +196,12 @@ $(".fieldforhide").hide();
             },
             // Callback for uploads start, equivalent to the global ajaxStart event:
             start: function () {
-                alert('Title and Description can not be blank')
 
+                alert('Title and Description can not be blank')
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
                      $(".fieldforhide").hide();
+
 
 
             },
@@ -224,6 +234,7 @@ $(".fieldforhide").hide();
         // Returns a canvas object if the canvas option is true
         // and the browser supports canvas, else the scaled image:
         _scaleImage: function (img, options) {
+
             options = options || {};
             var canvas = document.createElement('canvas'),
                 scale = Math.min(
@@ -249,6 +260,7 @@ $(".fieldforhide").hide();
         },
 
         _createObjectURL: function (file) {
+
             var undef = 'undefined',
                 urlAPI = (typeof window.createObjectURL !== undef && window) ||
                     (typeof URL !== undef && URL) ||
@@ -267,6 +279,7 @@ $(".fieldforhide").hide();
         // Loads a given File object via FileReader interface,
         // invokes the callback with a data url:
         _loadFile: function (file, callback) {
+
             if (typeof FileReader !== 'undefined' &&
                     FileReader.prototype.readAsDataURL) {
                 var fileReader = new FileReader();
@@ -346,6 +359,8 @@ $(".fieldforhide").hide();
             return (file.size / 100000).toFixed(2) + ' MB';
 
         }
+           
+
         },
 
 
