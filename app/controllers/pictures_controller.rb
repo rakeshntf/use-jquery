@@ -9,13 +9,24 @@ before_filter :authenticate_user!
   def index
    
     @pictures = Picture.where(:user_id => current_user.id)
- 
-    puts "indexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
     end
   end
+
+
+
+  def ajax_load_pictures
+    puts "load.ddddddddddddddddddddddddddddddddddddddddddd"
+     @pictures = Picture.where(:user_id => current_user.id)
+    puts "ajax............................................"
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
 
   # GET /pictures/1
   # GET /pictures/1.json
@@ -56,9 +67,7 @@ before_filter :authenticate_user!
   # POST /pictures.json
   def create
     @picture = Picture.new(params[:picture])
-
     respond_to do |format|
-   
       if @picture.save
        format.json { render :json => [ @picture.to_jq_upload ].to_json }
       else

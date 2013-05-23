@@ -14,7 +14,8 @@
     jQuery(window).load(function() {
     $(".fieldforhide").hide();
     });
-
+           
+        $.get("/ajax_load_pictures/"), {}, null, "script" ;
  
 (function ($) {
     'use strict';
