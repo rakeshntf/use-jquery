@@ -192,7 +192,7 @@ $(".fieldforhide").hide();
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
                      $(".fieldforhide").hide();
-
+                      window.location.reload();
 
             },
             // Callback for uploads stop, equivalent to the global ajaxStop event:
