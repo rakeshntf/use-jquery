@@ -132,7 +132,7 @@
                                 });
                         });
 
-                              window.location.reload();
+
                     });
                 } else {
                     that._renderDownload(data.result)
@@ -205,9 +205,6 @@
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
                      $(".fieldforhide").hide();
-                     
-
-                       
 
             },
             // Callback for uploads stop, equivalent to the global ajaxStop event:
