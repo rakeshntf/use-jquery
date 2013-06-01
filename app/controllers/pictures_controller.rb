@@ -4,8 +4,6 @@ class PicturesController < ApplicationController
   #load_and_authorize_resource
 
 before_filter :authenticate_user!
-  
-
   def index
    
     @pictures = Picture.where(:user_id => current_user.id)
@@ -16,13 +14,11 @@ before_filter :authenticate_user!
   end
 
 
-
   def ajax_load_pictures
-    puts "load.ddddddddddddddddddddddddddddddddddddddddddd"
-     @pictures = Picture.where(:user_id => current_user.id)
-    puts "ajax............................................"
+    puts "in ajsxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+       @pictures = Picture.where(:user_id => current_user.id)
     respond_to do |format|
-      format.js
+      format.js 
     end
   end
 

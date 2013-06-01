@@ -11,11 +11,14 @@
 
 /*jslint nomen: true, unparam: true, regexp: true */
 /*global window, document, URL, webkitURL, FileReader, jQuery */
+        
+
     jQuery(window).load(function() {
-    $(".fieldforhide").hide();
+     $(".fieldforhide").hide();
+     $.get("/ajax_load_pictures/"), {}, null, "script" ;
     });
            
-        $.get("/ajax_load_pictures/"), {}, null, "script" ;
+        
  
 (function ($) {
     'use strict';
@@ -129,7 +132,7 @@
                                 });
                         });
 
-
+                              window.location.reload();
                     });
                 } else {
                     that._renderDownload(data.result)
@@ -198,12 +201,13 @@
             // Callback for uploads start, equivalent to the global ajaxStart event:
             start: function () {
 
-                alert('Title and Description can not be blank')
+                
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
                      $(".fieldforhide").hide();
+                     
 
-
+                       
 
             },
             // Callback for uploads stop, equivalent to the global ajaxStop event:
@@ -227,7 +231,8 @@
                         $(this).remove();
                     });
                 }
-            }
+          
+            } 
         },
 
         // Scales the given image (img HTML element)

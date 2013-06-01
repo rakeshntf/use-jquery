@@ -20,8 +20,10 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
 
   resources :pictures
   root :to => 'pictures#index'
+   
 
-  get "/ajax_load_pictures" => "pictures#ajax_load_pictures"
+
+  get "/ajax_load_pictures" => "pictures#ajax_load_pictures" 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
