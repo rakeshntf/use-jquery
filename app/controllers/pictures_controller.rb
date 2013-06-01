@@ -7,10 +7,7 @@ before_filter :authenticate_user!
   
 
   def index
-   
     @pictures = Picture.where(:user_id => current_user.id)
- 
-    puts "indexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
