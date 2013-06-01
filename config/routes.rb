@@ -13,18 +13,12 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
     match '/users/sign_out' =>'devise/sessions#destroy'
   end
 
-
   resources :users do
     resources :pictures
   end
 
   resources :pictures
   root :to => 'pictures#index'
-   
-
-
-  get "/ajax_load_pictures" => "pictures#ajax_load_pictures" 
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

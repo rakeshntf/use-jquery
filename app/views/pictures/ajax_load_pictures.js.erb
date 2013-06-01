@@ -1,1 +1,1 @@
-$(".fileofsize").html('<%= escape_javascript(render :partial => "size", :locals => { :pictures => @pictures}) %>');
+$(".fileofsize").html('<%= r=(picture(@pictures)/100000.0000)%>');

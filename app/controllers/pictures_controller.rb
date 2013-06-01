@@ -12,18 +12,6 @@ before_filter :authenticate_user!
       format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
     end
   end
-
-
-  def ajax_load_pictures
-    puts "in ajsxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-       @pictures = Picture.where(:user_id => current_user.id)
-    respond_to do |format|
-      format.js 
-    end
-  end
-
-
-
   # GET /pictures/1
   # GET /pictures/1.json
   def show
