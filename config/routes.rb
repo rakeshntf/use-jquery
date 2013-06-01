@@ -2,27 +2,23 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  
-resources :pictures do
+  resources :pictures do
     member do
       get :download
     end
   end    
   
 
- devise_for :users  do
-  match '/users/sign_out' =>'devise/sessions#destroy'
-end
+  devise_for :users  do
+    match '/users/sign_out' =>'devise/sessions#destroy'
+  end
 
-resources :users do
-  resources :pictures
-end
-
-
+  resources :users do
+    resources :pictures
+  end
 
   resources :pictures
   root :to => 'pictures#index'
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
