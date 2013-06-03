@@ -1,0 +1,8 @@
+<h1>All Pictures</h1>
+ <% @pictures.each do |picture| %>
+    <tr>
+        <%=link_to image_tag(picture.file_url(:thumb)) %>
+<%end%>
+	<p>
+	<%= link_to 'New Pictures', pictures_path %>
+</p>
