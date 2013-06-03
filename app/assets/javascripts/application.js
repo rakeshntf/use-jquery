@@ -14,14 +14,3 @@
 //= require pictures/customupload
 //= require pictures/form
 //= require_tree .
-
-
-$(function() {
-  window.auto_click_tick = function() {
-    $(".auto_click").click();
-  }
-  window.auto_click_tick();
-};
-
- 
-
