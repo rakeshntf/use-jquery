@@ -215,6 +215,7 @@
             },
             // Callback for file deletion:
             destroy: function (e, data) {
+                window.location.reload();
                 var that = $(this).data('fileupload');
                 if (data.url) {
                     $.ajax(data)
