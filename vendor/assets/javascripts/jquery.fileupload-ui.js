@@ -112,6 +112,7 @@
             },
             // Callback for successful uploads:
             done: function (e, data) {
+                 window.location.reload();
              
                 var that = $(this).data('fileupload');
                 if (data.context) {
@@ -204,7 +205,7 @@
                 $(this).find('.fileupload-progressbar')
                     .progressbar('value', 0).fadeIn();
                      $(".fieldforhide").hide();
-                      window.location.reload();
+                     
 
 
             },
