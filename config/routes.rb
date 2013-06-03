@@ -1,5 +1,7 @@
 CarrierwaveJqueryFileUpload::Application.routes.draw do
 
+  get "home/index"
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :pictures do
@@ -18,7 +20,7 @@ CarrierwaveJqueryFileUpload::Application.routes.draw do
   end
 
   resources :pictures
-  root :to => 'pictures#index'
+  root :to => 'Home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
